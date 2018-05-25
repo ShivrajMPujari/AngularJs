@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body  >
+<!-- <div ng-app="" ng-init="names=['adg','ygf','yauf'];surname=['teq','qy','yry']">
+  <p >
+    <ol>
+      <li ng-repeat="x in names">{{x}} </li>
+    </ol>
+
+    <ul>
+      <li ng-repeat="y in surname"> {{y}}</li>
+    </ul>
+  </p>  </div> -->
+<!-- <div ng-app="" ng-init="name1=[{name:'jai',surname:'krishnan'},{name:'jai',surname:'krishnan'},{name:'jai',surname:'krishnan'}]">
+  <p>
+    <ol>
+      <li ng-repeat="z in name1">{{z.name}}</li>
+    </ol>
+  </p> -->
+
+<!--
+making directives
+ <div>
+  <p shiv-directive> </p>
+</div>
+
+<script type="text/javascript">
+var app=angular.module("myApp",[]);
+app.directive("shivDirective",function(){
+  return {template:"my directive"};}
+);
+</script>
+
+
+</div>-->
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<p ng-click="changeName()" >{{firstname}} </p>
+  <!-- <p ng-click="changeName()"></p> -->
+</div>
+
+<!-- <script>
+
+var app = angular.module("myApp",[]);
+app.controller("myCtrl",function($scope){
+$scope.firstname="shiv";
+$scope.changeName=function(){
+  $scope.firstname="shivraj";
+}
+});
+
+</script> -->
+<script src="Controller1.js"></script>
+
+</body>
+</html>

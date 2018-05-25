@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+</head>
+
+<body ng-app="BlankApp" ng-controller="myCtrl">
+
+
+    <div layout="row" layout-align="center">
+
+        <md-card style="width:40%">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Login Form</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <form name="userForm" >
+                    <div layout="column">
+
+                        <md-input-container>
+                            <label>Email Id</label>
+                            <input type="email" name="userEmail" ng-model="user.userEmail" ng-pattern="//^[^\s@_]+[^\s]+@[^\s@]+\.[^\s@]{2,}$/" required>
+                                
+                            <!-- <span style="color:Red" ng-show="userForm.userEmail.$dirty&&userForm.userEmail.$error.pattern">Please Enter Valid Email</span> -->
+                            <div ng-messages="userForm.userEmail.$error">
+                                <div ng-message="required">
+                                    You email is required.
+                                </div>
+                                <div ng-message="pattern">
+                                  Please Enter Valid Email.
+                                </div>
+                            </div>    
+                        </md-input-container>
+
+                        <md-input-container>
+                            <label>Password</label>
+                            <input type="password" name="Password" ng-model="user.password" required>
+                            <div ng-messages="userForm.Password.$error">
+                                <div ng-message="required">
+                                    You name is required.
+                                </div>
+                            </div>
+                        </md-input-container>
+                        
+                        <md-card-content>
+                            <md-card-actions layout="row" layout-align="center">
+                                <md-button ng-click="submitForm()" class="md-raised md-primary">login</md-button>
+                            </md-card-actions>
+                          <md-card-content>
+                        
+                        
+                    </div>
+                </form>
+          
+            </md-card-content>
+
+        </md-card>
+
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+
+<script type="text/javascript">
+  var app=  angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+    app.controller('myCtrl',function($scope){
+    $scope.submitForm=function(){
+      console.log($scope.user.userEmail);
+      console.log($scope.user.password)
+    }
+    
+  });
+</script>
+
+
+</html>
