@@ -1,0 +1,62 @@
+<div class="sideNavigation"  layout="column"  ng-cloak>
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+            <fieldset class="standard">
+              <legend style="text-align: center;">Manufacturer</legend>
+                <div layout="row" >
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'manufacturer'">
+                        <md-checkbox>{{item}}</md-checkbox>
+                        </li>
+                  </ul>
+            </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                <legend style="text-align: center;">OS</legend>
+                <div layout="row" >
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'os'">
+                        <md-checkbox>{{item}}</md-checkbox>
+                        </li>
+                  </ul>
+            </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                <legend style="text-align: center;">Camera</legend>
+                <div layout="row" >
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'camera'">
+                        <md-checkbox>{{item}}px</md-checkbox>
+                        </li>
+                  </ul>
+            </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                    <legend style="text-align: center;">Storage</legend>
+                <div layout="row" >
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'storage'">
+                        <md-checkbox>{{item}}GB</md-checkbox>
+                        </li>
+                  </ul>
+            </div>
+            </fieldset>
+        </md-sidenav>
+    </section>
+</div>
+<script type="text/javascript">
+function closeNav(){
+  var element= document.getElementbyId['sidenav'];
+  element.style.display=none;
+
+}
+
+function openNav(){
+  var element= document.getElementbyId['sidenav'];
+  element.style.display=block;
+}
+
+</script>
