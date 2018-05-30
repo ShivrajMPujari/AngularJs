@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+     $("#link").click(function(){
+       $('#nav').toggle(
+   function() {
+     $('#nav').css('left', '0')
+   }, function() {
+     $('#nav').css('left', '200px')
+   })
+     });
+  });
+  </script>
+
+
   <style>
 .sideNav{
   display: none;
@@ -27,15 +43,13 @@ button{
 <a href="" onclick="closeNav()">close</a>
 
 </div>
-
-
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
 function toggle() {
     var change = document.getElementById("nav");
     change.style.display = (change.style.display == "block") ? "none" : "block";
 }
 
-</script>
+</script> -->
 </html>

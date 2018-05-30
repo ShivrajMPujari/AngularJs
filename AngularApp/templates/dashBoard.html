@@ -1,0 +1,19 @@
+<div >
+  <md-content  class="md-padding"  layout="row" layout-wrap >
+     <div  ng-repeat="item in jsonData" flex-xs flex-gt-xs="30" layout="row" >
+       <md-card ><br><br><br>
+         <img ng-src="{{item.image.small}}" class="md-card-image" alt="Washed Out" height="250" width="250">
+         <md-card-title>
+           <md-card-title-text>
+             <span class="md-headline">{{item.name}}</span>
+           </md-card-title-text>
+         </md-card-title>
+        <md-card-content>
+          <p><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</p>
+          <p><strong>Price:</strong>{{item.price}}</p>
+          <p><strong>Specifications:-</strong></p>  <p><strong>OS:-</strong> {{item.specs.os}} <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </p>
+          <md-button class="md-raised md-primary" ng-click="showAdvanced($state,item)">details</md-button>
+        </md-card-content>
+        </div>
+      </md-card-content>
+</div>

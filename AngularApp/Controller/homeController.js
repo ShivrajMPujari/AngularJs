@@ -1,5 +1,4 @@
 app.controller('homeCtrl',function($scope, $mdSidenav,$http){
-
   $scope.toggleLeft = buildToggler('left');
       function buildToggler(componentId) {
         return function() {
