@@ -1,8 +1,8 @@
 <div  layout="column"  ng-cloak>
     <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+        <md-sidenav style="position:fixed;" class="md-sidenav-left" md-component-id="left" md-whiteframe="4" >
             <fieldset class="standard">
-              <legend style="text-align: center;">Manufacturer</legend>
+              <legend style="text-align:center;">Manufacturer</legend>
                 <div layout="row" >
                     <ul>
                         <li ng-repeat="item in jsonData|removeDuplicates:'manufacturer'">

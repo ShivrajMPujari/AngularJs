@@ -1,5 +1,20 @@
-<div>
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae laboriosam modi molestiae, beatae sint accusantium. Maiores nisi, provident! Corrupti a fuga quo eaque atque sit alias minima, ipsam vel quaerat.
-<p>{{items.name}}</p>
-</div>
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{items.name}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="assets/close.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+    <p>
+        <img ng-src="{{items.image.large}}" class="md-card-image" alt="Washed Out" >
+     </p>
+     <hr>
+    <p><strong>Description:-</strong>{{items.description}}</p>
+    </md-dialog-content>
+  </form>
+</md-dialog>
