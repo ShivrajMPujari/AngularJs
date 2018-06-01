@@ -6,7 +6,7 @@
                 <div layout="row" >
                     <ul>
                         <li ng-repeat="item in jsonData|removeDuplicates:'manufacturer'">
-                        <md-checkbox>{{item}}</md-checkbox>
+                        <md-checkbox ng-click="action(item,manufacturer[])" >{{item}}</md-checkbox>
                         </li>
                   </ul>
             </div>
@@ -47,16 +47,3 @@
         </md-sidenav>
     </section>
 </div>
-<script type="text/javascript">
-function closeNav(){
-  var element= document.getElementbyId['sidenav'];
-  element.style.display=none;
-
-}
-
-function openNav(){
-  var element= document.getElementbyId['sidenav'];
-  element.style.display=block;
-}
-
-</script>

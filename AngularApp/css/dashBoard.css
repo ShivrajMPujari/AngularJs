@@ -1,0 +1,27 @@
+.md-card-image{
+width:180px;
+height:210px;
+display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+.card{
+height:450px;
+
+}
+.card:hover{
+
+  opacity: 0.6;
+  cursor: pointer;
+  
+}
+
+.title{
+height:100px;
+}
+.price{
+padding-left: 65px;
+}
+.md-headline{
+  text-align: center;
+}

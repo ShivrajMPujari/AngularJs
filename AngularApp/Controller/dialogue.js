@@ -13,7 +13,7 @@ app.controller('dialogueCtrl',function($scope,$mdDialog){
 
   function DialogController($scope, items) {
       $scope.items=items;
-      
+
       $scope.cancel = function() {
         $mdDialog.cancel();
       };
@@ -22,4 +22,5 @@ app.controller('dialogueCtrl',function($scope,$mdDialog){
       $mdDialog.hide();
       };
   }
+
 });

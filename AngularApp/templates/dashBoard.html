@@ -1,19 +1,22 @@
 <div >
   <md-content  class="md-padding"  layout="row" layout-wrap >
-     <div  ng-repeat="item in jsonData" flex-xs flex-gt-xs="30" layout="row" >
-       <md-card ><br><br><br>
-         <img ng-src="{{item.image.small}}" class="md-card-image" alt="Washed Out" height="250" width="250">
-         <md-card-title>
-           <md-card-title-text>
+     <div  ng-repeat="item in jsonData" flex-xs flex-gt-xs="25" layout="row" >
+       <md-card class="card"> <br><br><br>
+         <img ng-src="{{item.image.small}}" class="md-card-image" alt="Washed Out">
              <span class="md-headline">{{item.name}}</span>
-           </md-card-title-text>
-         </md-card-title>
         <md-card-content>
-          <p><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</p>
-          <p><strong>Price:-</strong>{{item.price}}</p>
-          <p><strong>Specifications:-</strong></p>  <p><strong>OS:-</strong> {{item.specs.os}} <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </p>
+          <p>
+
+            <h><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</h><br>
+          <h><strong>OS:-</strong> {{item.specs.os}} <br>
+          <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </h>
+
+          </p>
+
           <md-button class="md-raised md-primary" ng-click="showAdvanced($state,item)">details</md-button>
+              <strong class="price">Rs.{{item.price}}</strong>
         </md-card-content>
+      </md-card>
         </div>
       </md-card-content>
 </div>
