@@ -1,0 +1,49 @@
+<div layout="column" class="container">
+    <section layout="row" flex>
+        <md-sidenav style="position:fixed;" class="md-sidenav-left" md-component-id="left" md-disable-backdrop>
+            <fieldset class="standard">
+                <legend style="text-align:center;">Manufacturer</legend>
+                <div layout="row">
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'manufacturer'">
+                            <md-checkbox ng-click="action(item,manufacturer)">{{item}}</md-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                <legend style="text-align: center;">OS</legend>
+                <div layout="row">
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'os'">
+                            <md-checkbox ng-click="action(item,os)">{{item}}</md-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                <legend style="text-align: center;">Camera</legend>
+                <div layout="row">
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'camera'">
+                            <md-checkbox ng-click="action(item,camera)">{{item}}px</md-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+
+            <fieldset class="standard">
+                <legend style="text-align: center;">Storage</legend>
+                <div layout="row">
+                    <ul>
+                        <li ng-repeat="item in jsonData|removeDuplicates:'storage'">
+                            <md-checkbox ng-click="action(item,storage)">{{item}}GB</md-checkbox>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+        </md-sidenav>
+    </section>
+</div>

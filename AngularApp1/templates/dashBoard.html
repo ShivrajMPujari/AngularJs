@@ -1,0 +1,19 @@
+<div class="dashBoardContainer" ng-style="myObj" >
+  <md-content  class="md-padding"  layout="row" layout-wrap >
+     <div  ng-repeat="item in jsonData |selectedItems:manufacturer:storage:os:camera" class="dashBoardDiv" layout="row" >
+       <md-card class="card">
+         <img ng-src="{{item.image.small}}" class="md-card-image" alt="Washed Out">
+             <span class="md-headline">{{item.name}}</span>
+        <md-card-content>
+          <p>
+            <h><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</h><br>
+          <h><strong>OS:-</strong> {{item.specs.os}} <br>
+          <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </h>
+          </p>
+          <md-button class="md-raised md-primary" ng-click="showAdvanced($state,item)">details</md-button>
+              <strong class="price">${{item.price}}</strong>
+        </md-card-content>
+      </md-card>
+        </div>
+      </md-card-content>
+</div>

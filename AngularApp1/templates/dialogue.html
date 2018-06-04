@@ -1,0 +1,20 @@
+<md-dialog aria-label="{{items.name}}">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{items.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon md-svg-src="assets/close.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <img ng-src="{{items.image.large}}" class="md-card-image-dialog" alt="Washed Out">
+
+            <hr>
+            <strong>Ratings:-{{items.rating}}/5</strong>
+            <p><strong>Description:-</strong>{{items.description}}</p>
+        </md-dialog-content>
+    </form>
+</md-dialog>
