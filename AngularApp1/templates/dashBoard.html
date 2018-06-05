@@ -6,14 +6,16 @@
              <span class="md-headline">{{item.name}}</span>
         <md-card-content>
           <p>
-            <h><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</h><br>
+          <h><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</h><br>
           <h><strong>OS:-</strong> {{item.specs.os}} <br>
           <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </h>
+          <strong class="price">${{item.price}}</strong>
           </p>
           <md-button class="md-raised md-primary" ng-click="showAdvanced($state,item)">details</md-button>
-              <strong class="price">${{item.price}}</strong>
+          <md-button class="md-raised md-primary" ng-click="">Add to cart</md-button>
         </md-card-content>
-      </md-card>
-        </div>
+        </md-card>
+      </div>
+      <strong id='match'> </strong>
       </md-card-content>
 </div>

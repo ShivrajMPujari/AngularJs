@@ -50,6 +50,9 @@ app.controller('homeCtrl', function($scope, $mdSidenav, $http,$state) {
     //   return filteredArray;
     // }
 
+    $scope.goToCart=function(){
+      $state.go('home.cart');
+    }
 
     $scope.logout=function(){
 

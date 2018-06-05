@@ -1,14 +1,20 @@
-var app = angular.module('BlankApp', ['ngMessages', 'ngMaterial', 'ui.router']);
+var app = angular.module('BlankApp', ['ngMessages', 'ngMaterial','jkAngularRatingStars','ui.router']);
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('login', {
-            url: "/login",
-            templateUrl: "templates/login.html",
+            url: '/login',
+            templateUrl: 'templates/login.html',
             controller: 'myCtrl'
         })
         .state('home', {
-            url: "/home",
-            templateUrl: "templates/home.html",
+            url: '/home',
+            templateUrl: 'templates/home.html',
             controller: 'homeCtrl'
+        })
+
+        .state('cart', {
+            url: 'cart',
+            templateUrl: 'templates/cartDetails.html',
+            controller: 'cartController'
         })
 
         .state('home.dashboard', {

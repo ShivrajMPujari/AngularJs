@@ -3,10 +3,10 @@ app.filter('selectedItems', function(myService) {
 
         var filteredArray = []; //filtered elements
         var tempArray = []; //stores data to perform next operations
-        var manufacturer="manufacturer";
-        var storage="storage";
-        var os="os";
-        var camera="camera";
+        var manufacturer = "manufacturer";
+        var storage = "storage";
+        var os = "os";
+        var camera = "camera";
         if (jsonData != undefined) {
 
             tempArray = jsonData;
@@ -23,32 +23,38 @@ app.filter('selectedItems', function(myService) {
                 //         }
                 //     }
                 // }
-              filteredArray= myService.filtringArray(tempArray,arrayManufacturer,filteredArray,manufacturer);
+                filteredArray = myService.filtringArray(tempArray, arrayManufacturer, filteredArray, manufacturer);
 
-
-            if (filteredArray.length > 0) {
-                tempArray = filteredArray;
-                filteredArray = [];
-            }
+                if (filteredArray.length > 0) {
+                    tempArray = filteredArray;
+                    filteredArray = [];
+                }
             }
             if (arrayStorage.length > 0) {
-                filteredArray= myService.filtringArray(tempArray,arrayStorage,filteredArray,storage);
+                filteredArray = myService.filtringArray(tempArray, arrayStorage, filteredArray, storage);
                 tempArray = filteredArray;
                 filteredArray = [];
             }
 
             if (arrayOs.length > 0) {
-                filteredArray= myService.filtringArray(tempArray,arrayOs,filteredArray,os);
+                filteredArray = myService.filtringArray(tempArray, arrayOs, filteredArray, os);
                 tempArray = filteredArray;
                 filteredArray = [];
             }
 
             if (arrayCamera.length > 0) {
-                filteredArray= myService.filtringArray(tempArray,arrayCamera,filteredArray,camera);
+                filteredArray = myService.filtringArray(tempArray, arrayCamera, filteredArray, camera);
                 tempArray = filteredArray;
                 filteredArray = [];
             }
         }
+
+        if(tempArray.length==0){
+          document.getElementById('match').innerHTML="no match found";
+        }else if(tempArray.length>0){
+          document.getElementById('match').innerHTML="";
+        }
+
         return tempArray;
     };
 });

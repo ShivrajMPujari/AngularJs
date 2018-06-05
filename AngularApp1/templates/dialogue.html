@@ -10,10 +10,19 @@
             </div>
         </md-toolbar>
         <md-dialog-content>
-            <img ng-src="{{items.image.large}}" class="md-card-image-dialog" alt="Washed Out">
-
+          <!-- <script>
+          function addStars(stars){
+            var HTML = ""; // Start the HTML string for concatenation
+              for(var i=0; i<5; i++) {  // We need 5 stars
+                var icoClass = i<stars ? "fa fa-star" : "fa fa-star-o"; // full or empty star?
+                HTML += "<i class='"+ icoClass +"'></i>"; // concatenate stars
+              }
+               document.getElementById("stars").innerHTML = HTML;
+          }
+          </script> -->
+            <img ng-src="{{items.image.large}}" class="md-card-image-dialog"  alt="Washed Out">
             <hr>
-            <strong>Ratings:-{{items.rating}}/5</strong>
+          <jk-rating-stars rating="items.rating" read-only="readOnly" ></jk-rating-stars>
             <p><strong>Description:-</strong>{{items.description}}</p>
         </md-dialog-content>
     </form>
