@@ -3,6 +3,6 @@ app.controller('myCtrl', function($scope, $state) {
         console.log($scope.user.userEmail);
         console.log($scope.user.password);
         if ($scope.user.userEmail == "shivrajpujari62@gmail.com" && $scope.user.password == "shiv")
-            $state.go('home');
+            $state.go('home.dashboard');
     }
 });

@@ -1,4 +1,4 @@
-app.controller('homeCtrl', function($scope, $mdSidenav, $http,$state) {
+app.controller('homeCtrl', function($scope, $mdSidenav, $http,$state,myService) {
     $scope.toggleLeft = buildToggler('left');
 
     function buildToggler(componentId) {
@@ -50,12 +50,40 @@ app.controller('homeCtrl', function($scope, $mdSidenav, $http,$state) {
     //   return filteredArray;
     // }
 
+    $scope.cartArray=[];
+    var arrayItems=[];
+
+    $scope.addItems=function(items){
+
+    arrayItems= myService.readStorage();
+    if(arrayItems.length==0){
+      items.count=1;
+      arrayItems.push(items);
+    }
+    else {
+
+      for (var i = 0; i < arrayItems.length; i++) {
+
+        if(arrayItems[i].id==items.id){
+          return;
+        }
+
+      }
+        items.count=1;
+        arrayItems.push(items);
+    }
+    myJSON = JSON.stringify(arrayItems);
+    localStorage.setItem("cartItems", myJSON);
+    console.log(myJSON);
+    $scope.cartArray=arrayItems;
+
+    }
+    $scope.cartArray = myService.readStorage();
     $scope.goToCart=function(){
       $state.go('home.cart');
     }
 
     $scope.logout=function(){
-
       $state.go('login');
     }
 

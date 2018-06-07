@@ -1,0 +1,61 @@
+
+
+table{
+
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto;
+}
+tr{
+  width: 900px;
+}
+
+th{
+  text-align: center;
+}
+/*.cart{
+
+height: 220px;
+width:200px;
+
+}*/
+
+.cartImg{
+
+  height: 180px;
+  width:150px;
+}
+
+td{
+
+height:270px;
+width:220px;
+/*border: black 1px solid;*/
+
+}
+
+.detailsDiv{
+  padding-right: 20px;
+}
+.optionDiv{
+
+  margin-left: 120px;
+}
+
+.removeDiv{
+    margin-left: 40px;
+}
+
+
+td>div{
+  height:250px;
+  width:200px;
+padding-left: 20px;
+
+}
+strong{
+  text-align: center;
+}
+.price{
+    text-align: center;
+}

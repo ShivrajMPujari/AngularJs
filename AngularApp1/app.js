@@ -1,4 +1,5 @@
 var app = angular.module('BlankApp', ['ngMessages', 'ngMaterial','jkAngularRatingStars','ui.router']);
+
 app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('login', {
             url: '/login',
@@ -11,8 +12,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'homeCtrl'
         })
 
-        .state('cart', {
-            url: 'cart',
+        .state('home.cart', {
+            url: '/cart',
             templateUrl: 'templates/cartDetails.html',
             controller: 'cartController'
         })

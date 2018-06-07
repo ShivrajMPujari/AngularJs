@@ -4,17 +4,21 @@
        <md-card class="card">
          <img ng-src="{{item.image.small}}" class="md-card-image" alt="Washed Out">
              <span class="md-headline">{{item.name}}</span>
-        <md-card-content>
+        <md-card-content class="content">
           <p>
           <h><strong>Manufacturer:-</strong>{{item.specs.manufacturer}}</h><br>
           <h><strong>OS:-</strong> {{item.specs.os}} <br>
           <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP </h>
-          <strong class="price">${{item.price}}</strong>
+          <strong class="price">${{item.price}}</strong><br>
           </p>
-          <md-button class="md-raised md-primary" ng-click="showAdvanced($state,item)">details</md-button>
-          <md-button class="md-raised md-primary" ng-click="">Add to cart</md-button>
         </md-card-content>
+        <md-card-actions>
+          <md-button class="md-raised md-primary buttons" ng-click="showAdvanced($state,item)">details</md-button>
+          <md-button class="md-raised md-primary buttons" ng-click="addItems(item)">Add to cart</md-button>
+        </md-card-actions>
+
         </md-card>
+
       </div>
       <strong id='match'> </strong>
       </md-card-content>

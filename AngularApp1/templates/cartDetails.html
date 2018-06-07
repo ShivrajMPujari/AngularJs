@@ -1,1 +1,57 @@
-<div ui-view> afa</div>
+<div>
+<table  class="table table-striped">
+
+  <tr>
+    <th>products</th>
+    <th> details</th>
+    <th>  price</th>
+    <th>   quantity</th>
+    <th>   remove</th>
+  </tr>
+
+  <tr ng-repeat="product in products" >
+  <td>
+    <div class="cart">
+      <md-content  class="md-padding"  layout="row" layout-wrap >
+
+           <md-card class="cartDiv">
+             <img ng-src="{{product.image.small}}" class="cartImg" alt="Washed Out">
+                 <strong >{{product.name}}</strong>
+            </md-card>
+
+          </md-card-content>
+    </div>
+ </td>
+  <td> <div class="detailsDiv">
+      <p>
+      <h><strong>Manufacturer:-</strong>{{product.specs.manufacturer}}</h><br>
+      <h><strong>OS:-</strong> {{product.specs.os}} <br>
+      <strong>Storage:-</strong> {{product.specs.storage}}GB </h>
+      </p>
+  </div> </td>
+
+  <td>
+    <div class="priceDiv">
+    <strong class="price">${{product.price}}</strong>
+  </div>
+  </td>
+  <td>
+     <div class="optionDiv">
+       <select ng-options="num for num in rangeArray" ng-model="product.count" ng-change="changedQuantity(product,product.count)"  class="md-no-underline" >
+      </select>
+  </div>
+ </td>
+ <td>
+   <div class="removeDiv">
+    <md-button class="md-raised md-primary" ng-click="remove(product)">Remove</md-button>
+    </div>
+ </td>
+  </tr>
+    <tr>
+  <td colspan="2">Total:-{{totals}} </td>
+  <td colspan="2">
+    <md-button class="md-raised md-primary" ng-click="goToDash()">Continue Shopping</md-button>
+  </td>
+    </tr>
+</table>
+</div>

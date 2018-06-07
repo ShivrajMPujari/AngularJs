@@ -1,4 +1,4 @@
-app.controller('dialogueCtrl', function($scope, $mdDialog) {
+app.controller('dashboardController', function($scope, $mdDialog) {
 
 
 //   $scope.addStars=function(stars){

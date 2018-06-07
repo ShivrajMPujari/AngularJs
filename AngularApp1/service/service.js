@@ -15,17 +15,24 @@ app.service('myService',function(){
     }
     return filteredArray;
   }
+
+  this.readStorage=function(){
+
+    cartString = localStorage.getItem("cartItems");
+    cartObject = JSON.parse(cartString);
+    console.log(cartObject);
+    if(cartObject==null){
+      myJSON=[];
+      jsonString = JSON.stringify(myJSON);
+      localStorage.setItem("cartItems", jsonString);
+      cartJson = localStorage.getItem("cartItems");
+      console.log(cartObject+"gaag");
+      var allItem = JSON.parse(cartJson);
+      return allItem;
+    }
+
+    return cartObject;
+  }
+
 }
 );
-app.service('starService',function(){
-
-this.printStar=function(rating){
-var HTML = ""; // Start the HTML string for concatenation
-  for(var i=0; i<5; i++) {  // We need 5 stars
-    var icoClass = i<ob.star ? "fa fa-star" : "fa fa-star-o"; // full or empty star?
-    HTML += "<i class='"+ icoClass +"'></i>"; // concatenate stars
-  }
-   return HTML;
-}
-
-});

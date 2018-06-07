@@ -4,11 +4,9 @@
             <md-button class="md-raised md-primary" ng-click="toggleLeft()">
                 <md-icon md-svg-icon="assets/icons8-menu.svg"></md-icon>
             </md-button>
-
             <h2 flex md-truncate>Online Mobile Shopping</h2>
-
             <md-button class="md-raised md-primary" ng-click="goToCart()">
-                <md-icon md-svg-icon="assets/iconmonstr-shopping-cart-3.svg"></md-icon>
+                <md-icon md-svg-icon="assets/iconmonstr-shopping-cart-3.svg"></md-icon>{{cartArray.length}}
             </md-button>
             <md-button class="md-raised md-primary" ng-click="logout()">
               LOGOUT
