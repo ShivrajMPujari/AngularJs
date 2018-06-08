@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h2>callBack functions</h2>
+</body>
+<script>
+
+// var obj=[
+// {
+//   num:4,
+//   str:'apple'
+// },{
+//   num:7,
+//   str:'zete'
+// },{
+//   num:2,
+//   str:'mi'
+// }
+// ];
+//
+// var myArr=[2,4,2,9,6,7,4];
+//
+// console.log(myArr.sort());
+//
+// obj.sort(function(v1,v2){
+//
+// if(v1.str>v2.str){
+//   return -1;
+// } else{
+//   return 1;
+// }
+//
+// });
+//
+// console.log(obj);
+
+let add= function(a,b){
+  return a+b;
+};
+
+let multiply=function(a,b){
+  return a*b;
+};
+
+let calc=function(a,b,callback){
+return callback(a,b);
+};
+
+console.log(calc(5,4,add));
+
+
+
+</script>
+</html>
