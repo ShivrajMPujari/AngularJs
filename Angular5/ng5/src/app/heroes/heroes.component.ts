@@ -13,16 +13,16 @@ export class HeroesComponent implements OnInit {
 
 //  heroes = HEROES;
 heroes: Hero[];
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
-  onselect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+  // onselect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  // }
 
-  hero: Hero = {
-     id: 1,
-     name: 'Windstorm'
-   };
+  // hero: Hero = {
+  //    id: 1,
+  //    name: 'Windstorm'
+  //  };
 
   //    getHeroes(): void {
   //   this.heroes = this.heroService.getHeroes();

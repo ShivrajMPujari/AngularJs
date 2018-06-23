@@ -17,6 +17,14 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-<h3>{{title}}</h3>
-<app-heroes></app-heroes>
+
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/heroes">Heroes</a>
+  <a routerLink="/dashboard">dashboard</a>
+</nav>
 <router-outlet></router-outlet>
+<app-messages></app-messages>
+<!-- <app-heroes></app-heroes> -->
+
+
