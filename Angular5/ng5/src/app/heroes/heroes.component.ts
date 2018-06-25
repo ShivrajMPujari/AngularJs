@@ -12,7 +12,7 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
 
 //  heroes = HEROES;
-heroes: Hero[];
+  heroes: Hero[];
   // selectedHero: Hero;
 
   // onselect(hero: Hero): void {
@@ -27,14 +27,14 @@ heroes: Hero[];
   //    getHeroes(): void {
   //   this.heroes = this.heroService.getHeroes();
   // }
-
+  constructor(private heroService: HeroService) { }
   getHeroes(): void {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes);
   }
 
 
-  constructor(private heroService: HeroService) { }
+ 
 
   ngOnInit() {
     this.getHeroes();
