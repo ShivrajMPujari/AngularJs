@@ -7,13 +7,17 @@
     <mat-card-content fxflex="45%">
         <div class="example-container" >
             <mat-form-field>
-              <input matInput placeholder="Input">
+              <input id="email" [(ngModel)]="user1.email" #email ="ngModel"  required pattern="^[a-zA-z0-9_,+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"  matInput placeholder="Enter your email" [type]="'text'">
             </mat-form-field>
+            <span class="helpblock" *ngIf="email.errors?.required && email.touched" >
+              Email is required
+            </span>
+            <span class="helpblock" *ngIf="email.errors?.pattern"> Invalid Email </span>
             <mat-form-field>
-              <input matInput placeholder="Enter your password" [type]="'password'">
+              <input name="password" matInput placeholder="Enter your password" [type]="'password'">
             </mat-form-field>
             <mat-card-actions fxLayoutAlign="center">	
-              <button mat-raised-button color="primary" routerLink="/home">login</button>
+              <button mat-raised-button color="primary" [disabled]="email.errors" routerLink="/home">login</button>
             </mat-card-actions>	
           </div>
     </mat-card-content>
