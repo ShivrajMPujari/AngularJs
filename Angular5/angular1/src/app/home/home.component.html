@@ -2,26 +2,47 @@
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon>
     </button>
     <span>MyApp</span>
- </mat-toolbar>
+</mat-toolbar>
  
  <mat-sidenav-container>
 
-        <mat-sidenav #snav mode="push">
-       
-            <mat-nav-list>
-                        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a>
-            </mat-nav-list>
+        <mat-sidenav #snav mode="push" class="sideNavigation">
+            
+            <mat-nav-list *ngIf="products.length">
+                        <!-- <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{nav}}</a> -->
+                        <fieldset class="field" >
+                                <legend><strong> Manufacturers </strong></legend>
+                        <div *ngFor="let product1 of (products|unique:'manufacturer')">
+                          <p><mat-checkbox mat-list-item >{{product1}}</mat-checkbox></p>  
+                        </div>
+                    </fieldset>     
+                    <fieldset class="field" >
+                            <legend><strong> OS </strong></legend>
+                    <div *ngFor="let product2 of (products|unique:'os')">
+                      <p><mat-checkbox mat-list-item >{{product2}}</mat-checkbox></p>  
+                    </div>
+                </fieldset>  
+                
+                <fieldset class="field" >
+                  <legend><strong> Storage </strong></legend>
+          <div *ngFor="let product3 of (products|unique:'storage')">
+            <p><mat-checkbox mat-list-item >{{product3}}</mat-checkbox></p>  
+          </div>
+      </fieldset> 
 
+            <fieldset class="field" >
+              <legend><strong> Camera </strong></legend>
+      <div *ngFor="let product4 of (products|unique:'storage')">
+        <p><mat-checkbox mat-list-item >{{product4}}MP</mat-checkbox></p>  
+      </div>
+      </fieldset> 
+
+             </mat-nav-list>
+                
         </mat-sidenav>
-        
-        <div *ngFor="let content of fillerContent" >{{content}}</div>
 
-        <div *ngIf="products.length">
-           <div *ngFor="let product of products">          
-            <p>{{product.name}}</p>
-           </div>
-        </div>
-     
+        <app-dashboard></app-dashboard>
+       
  </mat-sidenav-container>
      
 

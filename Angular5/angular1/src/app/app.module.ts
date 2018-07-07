@@ -21,13 +21,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { UniqueValuePipe } from './uniqueValue.pipe';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-
+    UniqueValuePipe,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +49,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule
  
   ],
   providers: [ReadJsonService],

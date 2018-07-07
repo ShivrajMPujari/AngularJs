@@ -1,10 +1,14 @@
+import { SpecsItem } from './specsItem';
+import { ImageObj } from './imgProduct';
 export interface IProducts{
 
     id:number;
     name:string;
     price:number;
-    specs:object;
+    specs:SpecsItem;
     description:string;
     rating :number;
-    image:object;
+    image:ImageObj;
 }
+
+

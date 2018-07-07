@@ -1,0 +1,28 @@
+
+<div fxLayout="column">
+
+
+<div fxLayout="row wrap" fxLayoutGap="20px">
+<div *ngFor="let item of items" class="flexDiv" >   
+  <mat-card  >
+
+    <img mat-card-image class="imgCard" src="{{item.image.small}}"alt="not found">
+    <mat-card-content>
+        <p>
+            <strong>Manufacturer:-</strong>{{item.specs.manufacturer}}<br>
+            <strong>OS:-</strong> {{item.specs.os}} <br>
+            <strong>Storage:-</strong> {{item.specs.storage}}GB  <strong>Camera:-</strong>{{item.specs.camera}}MP 
+            <strong class="price">${{item.price}}</strong><br>
+       </p>
+
+    </mat-card-content>
+  
+    <mat-card-actions>
+        <button mat-raised-button color="primary" mat-button>Details</button>
+    </mat-card-actions>
+  </mat-card >
+</div>
+</div>
+
+  
+</div>
